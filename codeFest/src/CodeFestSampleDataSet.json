@@ -1,0 +1,51 @@
+
+[
+    {
+        "Location": "Fort Lauderdale Marriott Harbor Beach Resort & Spa",
+        "Number of Travelers": ["Couple", "Group of 3+"],
+        "Connecting Rooms": "Yes",
+        "Type of Destination": "Beach",
+        "Weather": "Hot and Humid",
+        "Dietary": ["Pescatarian"],
+        "Cuisine": ["Italian", "American"],
+        "Budget": "150-500",
+        "Transport": ["Car Rental", "Bicycles", "Walking", "Bus", "Uber"],
+        "Activities": ["Outdoor Physical", "Swimming", "Relaxing"]
+    },
+    {
+        "Location": "Rome Marriott Park Hotel",
+        "Number of Travelers": ["Couple"],
+        "Connecting Rooms":"No",
+        "Type of Destination": "City",
+        "Weather": "Warm and Breezy",
+        "Dietary": ["Vegetarian", "Pescatarian"],
+        "Cuisine": ["Italian"],
+        "Budget": "150-500",
+        "Transport": ["Trains", "Walking", "Bus"],
+        "Activities": ["Historical Significance Sites", "Relaxing", "City Exploring"]
+    },
+    {
+        "Location": "Moxy Bergen",
+        "Number of Travelers": ["Group of 3+", "Travel with kids"],
+        "Connecting Rooms": "No",
+        "Type of Destination": "Lakes",
+        "Weather": "Chilly and Snowy",
+        "Dietary": ["Vegetarian", "Pescatarian"],
+        "Cuisine": ["Japanese", "American"],
+        "Budget": "1000+",
+        "Transport": ["Trains", "Walking", "Bus", "Uber"],
+        "Activities": ["Historical Significance Sites", "Relaxing", "City Exploring"]
+    },
+    {
+        "Location": "Fairfield Inn & Suites Alamosa",
+        "Number of Travelers": ["Group of 3+", "Travel with kids"],
+        "Connecting Rooms": "No",
+        "Type of Destination": "Mountains",
+        "Weather": "Chilly and Snowy",
+        "Dietary": ["Vegetarian", "Vegan"],
+        "Cuisine": ["American"],
+        "Budget": "50-150",
+        "Transport": ["Bus", "Car Rental"],
+        "Activities": ["Winter Sports", "Relaxing", "Outdoor Physical"]
+    }
+]
