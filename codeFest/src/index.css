@@ -6,3 +6,16 @@
 .small-image { max-width: 150%; height: auto; }
 
 .fixed-size-image { width: 400px; height: 900px; object-fit: cover; }
+.question-display{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.travel-button{
+    padding: 20px;
+}
