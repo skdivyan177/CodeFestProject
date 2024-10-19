@@ -12,9 +12,10 @@
 }
 
 .responsive-image {
-  width: 500%;    
-  max-width: 500%;    
-  height: auto;  
+      
+  max-width: 100%;     
+  width: 10000px;
+  
 }
 
 
