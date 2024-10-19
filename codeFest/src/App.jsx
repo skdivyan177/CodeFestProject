@@ -20,6 +20,8 @@ const App = () => {
       alt="alt"
       className="responsive-image"
     />
+
+    
     <TravelForm></TravelForm>
 
     {/* <button type="button" onClick={handleClick}>
