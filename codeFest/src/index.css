@@ -39,10 +39,10 @@
   color: white;
   background-color: rgb(232, 229, 229);
   position: fixed;
-  inset: 0px auto auto 10px;
+  inset: 0px auto auto 40px;
   border: 1px solid;
-  border-radius: 20px;
-  width: 150px;
+  border-radius: 10px;
+  width: 55px;
   height: auto;
 }
 
@@ -54,10 +54,10 @@
   color: white;
   background-color: rgb(232, 229, 229);
   position: fixed;
-  inset: 0px auto auto 170px;
+  inset: 0px auto auto 250px;
   border: 1px solid;
-  border-radius: 20px;
-  width: 150px;
+  border-radius: 10px;
+  width: 75px;
   height: auto;
 }
 
@@ -69,10 +69,10 @@
   color: white;
   background-color: rgb(232, 229, 229);
   position: fixed;
-  inset: 0px auto auto 330px;
+  inset: 0px auto auto 490px;
   border: 1px solid;
-  border-radius: 20px;
-  width: 150px;
+  border-radius: 10px;
+  width: 60px;
   height: auto;
 }
 
@@ -86,8 +86,8 @@
   position: fixed;
   inset: 0px 10px auto auto;
   border: 1px solid;
-  border-radius: 20px;
-  width: 150px;
+  border-radius: 10px;
+  width: 95px;
   height: auto;
 }
 
@@ -107,4 +107,12 @@
     align-items: center;
     justify-content: center;
     
+}
+
+.main-title {
+    font-size: 50px;
+}
+
+.sub-title {
+    font-size: 50px;
 }
