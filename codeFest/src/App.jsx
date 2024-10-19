@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import TravelForm from './components/TravelForm';
-
+import img from './images/almare.jpg'
 
 const App = () => {
 
@@ -16,7 +16,7 @@ const App = () => {
       /> */
       
     <img
-      src="https://cache.marriott.com/is/image/marriotts7prod/fllsb-view-0077:Pano-Hor?wid=1600&fit=constrain"
+      src={img}
       alt="alt"
       className="responsive-image"
     />

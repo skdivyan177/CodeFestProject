@@ -20,15 +20,17 @@ const TravelForm = () => {
             </div>
             <div className="question-display">
                 <div>
-                <h5>
+                <h5 className="fontstylesize">
                     Ready to start your course with our Destination Calculator?<br></br>
+                    
                     Simply click the button below to get started!
                 </h5>
                 </div>
                 
                 <div className="buttons-container">
                     <button className="travel-buttons">
-                        Get Started!
+                            
+                    Find my dream destination!
                     </button>
                 </div>
             </div>
