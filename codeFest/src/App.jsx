@@ -7,7 +7,9 @@ const App = () => {
 
   return (
   <div className="image-container">
-    {/* <img
+    <h1> Destination Calculator </h1>
+    
+    <img
         src="https://brandslogos.com/wp-content/uploads/images/large/marriott-logo.png"
         alt="alt"
         className="small-image" 
@@ -19,6 +21,19 @@ const App = () => {
       className="responsive-image"
     />
     <TravelForm></TravelForm>
+
+    {/* <button type="button" onClick={handleClick}>
+      Home
+    </button>
+    <button type="button" onClick={handleClick}>
+      About Us 
+    </button>
+    <button type="button" onClick={handleClick}>
+      Contact
+    </button>
+    <button type="button" onClick={handleClick}>
+      Language 🌐
+    </button> */}
   </div>  
   )
 }
