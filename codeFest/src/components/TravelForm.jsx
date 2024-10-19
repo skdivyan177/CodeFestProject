@@ -3,7 +3,21 @@ import React, {Component, useState} from "react";
 const TravelForm = () => {
     
     return(
-        <div>
+        <div >
+            <div className="menu-display">
+            <button className="menu-button1">
+                        Home
+                    </button>
+                    <button className="menu-button2">
+                        About Us
+                    </button>
+                    <button className="menu-button3">
+                        Contact
+                    </button>
+                    <button className="menu-button4">
+                        Language 🌐
+                    </button>
+            </div>
             <div className="question-display">
                 <div>
                 <h5>
@@ -12,12 +26,11 @@ const TravelForm = () => {
                 </h5>
                 </div>
                 
-                <div>
+                <div className="buttons-container">
                     <button className="travel-buttons">
                         Get Started!
                     </button>
                 </div>
-                
             </div>
         </div>
     )

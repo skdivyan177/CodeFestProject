@@ -7,15 +7,30 @@
 
 .fixed-size-image { width: 400px; height: 900px; object-fit: cover; }
 .question-display{
-    padding: 20px;
+    /* padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: transparent;
     border: 1px solid black;
+    margin-top: 40px; */
+
+    position: fixed;
+    inset: 0px;
+    width: 12rem;
+    height: 9rem;
+    max-width: 1000vw;
+    max-height: 1000dvh;
+    margin: auto;
+    border: 1px solid black;
+    /* background-color: transparent; */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);  /*White with 50% opacity */
+    opacity: 1; 
+     
 }
 
 .travel-button{
-    padding: 30px;
+    padding: 20px;
 }
