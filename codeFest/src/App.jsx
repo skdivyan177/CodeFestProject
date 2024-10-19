@@ -9,6 +9,7 @@ const App = () => {
   <div className="image-container">
 
   <h1 class="main-title">Marriott</h1>
+  
   <h1 class="sub-title">Destination Calculator</h1>
 
     <img
