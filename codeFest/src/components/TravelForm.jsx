@@ -38,6 +38,9 @@ const TravelForm = () => {
         });
     };
     
+    const handleBack = () => {
+        setIndex((prevIndex) => prevIndex - 1)
+    }
     return(
         <div>
             <div className="menu-display1">
@@ -86,8 +89,13 @@ const TravelForm = () => {
                 </UserChoice>
 
                 <div className="buttons-container">
+    
+
+                    <button className="travel-buttons" onClick={handleBack}>
+                        Back
+                    </button>
                     <button className="travel-buttons" onClick={handleNext}>
-                        Get Started!
+                        Next
                     </button>
                 </div>
                 
