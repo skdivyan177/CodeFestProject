@@ -21,10 +21,6 @@ const App = () => {
       className="responsive-image"
     />
     <TravelForm></TravelForm>
-    <button type="button">Home</button>
-    <button type="button">About Us</button>
-    <button type="button">Contact</button>
-    <button type="button">Language 🌐</button>
 
     {/* <button type="button" onClick={handleClick}>
       Home
