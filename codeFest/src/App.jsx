@@ -16,7 +16,7 @@ const App = () => {
       alt="alt"
       className="responsive-image"
     />
-    
+    <TravelForm></TravelForm>
   </div>  
   )
 }
