@@ -65,9 +65,10 @@ const TravelForm = () => {
             
             <div className="question-display">
                 {index < 0 && ( // Only display message if index is -1
-                    <h5>
+                    <h5 className="fontstylesize">
                         Ready to start your course with our Destination Calculator?<br></br>
-                        Simply click the button below to get started!
+                        
+                    Simply click the button below to get started!
                     </h5>
                 )}
                 <h5>
@@ -87,8 +88,8 @@ const TravelForm = () => {
                 </UserChoice>
 
                 <div className="buttons-container">
-                    <button className="travel-buttons"onClick={handleNext} disablle={index === formQuestions.length - 1}>
-                        Next
+                    <button className="travel-buttons">
+                        Get Started!
                     </button>
                 </div>
                 
