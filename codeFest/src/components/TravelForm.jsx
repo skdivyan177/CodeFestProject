@@ -36,22 +36,28 @@ const TravelForm = () => {
     const currentQuestion = questions[index];
     
     return(
-        <div >
-            <div className="menu-display">
-                <button className="menu-button1">
+        <div>
+            <div className="menu-display1">
+            <button className="menu-button1">
                         Home
-                    </button>
+            </button>
+            </div>
+            <div className="menu-display2">
                     <button className="menu-button2">
                         About Us
                     </button>
+            </div>
+            <div className="menu-display3"> 
                     <button className="menu-button3">
                         Contact
                     </button>
+            </div>
+            <div className="menu-display4"> 
                     <button className="menu-button4">
                         Language 🌐
                     </button>
             </div>
-
+            
             <div className="question-display">
                 <div>
                 <h5>
