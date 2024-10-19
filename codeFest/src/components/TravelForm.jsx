@@ -86,8 +86,8 @@ const TravelForm = () => {
                 </UserChoice>
 
                 <div className="buttons-container">
-                    <button className="travel-buttons"onClick={handleNext} disablle={index === formQuestions.length - 1}>
-                        Get started!
+                    <button className="travel-buttons" onClick={handleNext}>
+                        Get Started!
                     </button>
                 </div>
                 
