@@ -9,10 +9,10 @@ public class HMP {
         map.put("", "");
         
         System.out.println(map);
-        if (map.containsKey("vishal")) {
-            Integer a = map.get("vishal");
+        if (map.containsKey("")) {
+            Integer a = map.get("");
             System.out.println("value for key"
-                               + " \"vishal\" is: " + a);
+                               + " \"\" is: " + a);
         }
     }
 }
