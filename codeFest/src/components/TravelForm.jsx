@@ -4,18 +4,15 @@ import UserChoice from './UserChoice'
 const TravelForm = () => {
     
     const [index, setIndex] = useState(-1);
-    const [input, setInput] = useState([
-        {question:'Who are you traveling with?', choices: ''},
-        {question:'Preferred Travel Destination?', choices: ''},
-        {question:'Weather Preferences for Destination?', choices: ''},
-        {question:'Any Dietary Restrictions?',choices: ''},
-        {question:'Cuisine Preferences?' ,choices: ''},
-        {question:'What is your budget?', choices: ''},
-        {question:'Preferred methods of transportation?', choices: ''},
-        {question:'Activities?', choices: ''}
-        
-    ]);
-
+    const [input, setInput] = useState([]);
+// {question:'Who are you traveling with?', choices: ''},
+        // {question:'Preferred Travel Destination?', choices: ''},
+        // {question:'Weather Preferences for Destination?', choices: ''},
+        // {question:'Any Dietary Restrictions?',choices: ''},
+        // {question:'Cuisine Preferences?' ,choices: ''},
+        // {question:'What is your budget?', choices: ''},
+        // {question:'Preferred methods of transportation?', choices: ''},
+        // {question:'Activities?', choices: ''}
     
     const formQuestions = [
         {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
@@ -33,7 +30,13 @@ const TravelForm = () => {
         setIndex((prevIndex) => prevIndex + 1);
     }
 
-    
+    const handleChange = (e) => {
+        setInput((prevChoices) => {
+          const newChoices = [...prevChoices];
+          newChoices[index] = e.target.value;
+          return newChoices;
+        });
+    };
     
     return(
         <div>
@@ -57,47 +60,49 @@ const TravelForm = () => {
                         Language 🌐
                     </button>
             </div>
+
+            
             
             <div className="question-display">
-                <div>
+                {index < 0 && ( // Only display message if index is -1
+                    <h5>
+                        Ready to start your course with our Destination Calculator?<br></br>
+                        Simply click the button below to get started!
+                    </h5>
+                )}
                 <h5>
-                    Ready to start your course with our Destination Calculator?<br></br>
-                    Simply click the button below to get started!
+                    {formQuestions[index]?.question}
                 </h5>
-                </div>
-                
-                <div className="buttons-container">
-                    <button className="travel-buttons" onClick={handleNext}>
-                        Get Started!
-                    </button>
-
-                </div>
-
                 <UserChoice
-                    handleChange={(e) => setInput((prevState) => ({
-                        ...prevState,
-                        [e.target.name]: e.target.value,
-                    }))}
                     
-
+                    
+                    handleChange={handleChange}
                     label={formQuestions[index]?.question || ''} // Handle undefined question
                     choices={formQuestions[index]?.choices || []}
-                    checked={input[index]?.choices}
+                    checked={input[index]}
                 
                 
                 >
 
-
                 </UserChoice>
-                <button onClick={handleNext} disablle={index === formQuestions.length - 1}>
 
-                </button>
-                
-
-                
-
+                <div className="buttons-container">
+                    <button className="travel-buttons"onClick={handleNext} disablle={index === formQuestions.length - 1}>
+                        Next
+                    </button>
+                </div>
                 
             </div>
+                
+                
+
+                
+                
+
+                
+
+                
+            
 
             
         </div>

@@ -6,6 +6,7 @@
 .small-image { max-width: 150%; height: auto; }
 
 .fixed-size-image { width: 400px; height: 900px; object-fit: cover; }
+
 .question-display{
     /* padding: 20px;
     display: flex;
@@ -17,9 +18,11 @@
     margin-top: 40px; */
 
     position: fixed;
+    /* display: flex;
+    flex-direction: column; */
     inset: 0px;
     width: 12rem;
-    height: 9rem;
+    height: 18rem;
     max-width: 1000vw;
     max-height: 1000dvh;
     margin: auto;
