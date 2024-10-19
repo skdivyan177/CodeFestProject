@@ -33,7 +33,7 @@ const TravelForm = () => {
         setIndex((prevIndex) => prevIndex + 1);
     }
 
-    const currentQuestion = questions[index];
+    
     
     return(
         <div>
@@ -74,15 +74,15 @@ const TravelForm = () => {
                 </div>
 
                 <UserChoice
-                    handleChange={(e) => setInputs((prevState) => ({
+                    handleChange={(e) => setInput((prevState) => ({
                         ...prevState,
                         [e.target.name]: e.target.value,
                     }))}
                     
 
-                    label={formQuestions[index].question}
-                    choices={formQuestions[index].choices}
-                    checked={input[index].choices}
+                    label={formQuestions[index]?.question || ''} // Handle undefined question
+                    choices={formQuestions[index]?.choices || []}
+                    checked={input[index]?.choices}
                 
                 
                 >

@@ -1,6 +1,8 @@
 import React, {Component, useEffect, useState} from "react";
 
-const UserChoice = ({handleChange, label, choices, checked}) => {
+const UserChoice = ({handleChange, label, choices, checked }) => {
+
+    
 
     return (
 
@@ -15,7 +17,7 @@ const UserChoice = ({handleChange, label, choices, checked}) => {
                         name = {label}
                         type = "radio"
                         onChange={handleChange}
-                        checked = {checked ==choice}
+                        checked = {checked ===choice}
                         
                         ></input>
 
