@@ -1,6 +1,39 @@
 import React, {Component, useState} from "react";
+import UserChoice from './UserChoice'
 
 const TravelForm = () => {
+    
+    const [index, setIndex] = useState(-1);
+    const [input, setInput] = useState([
+        {question:'Who are you traveling with?', choices: ''},
+        {question:'Preferred Travel Destination?', choices: ''},
+        {question:'Weather Preferences for Destination?', choices: ''},
+        {question:'Any Dietary Restrictions?',choices: ''},
+        {question:'Cuisine Preferences?' ,choices: ''},
+        {question:'What is your budget?', choices: ''},
+        {question:'Preferred methods of transportation?', choices: ''},
+        {question:'Activities?', choices: ''}
+        
+    ]);
+
+    
+    const formQuestions = [
+        {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
+        {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Montain']},
+        {question:'Weather Preferences for Destination?', choices: ['Warm & Breezy', 'Hot & Humid', 'Cold & Rainy', 'Snowy & Chilly']},
+        {question:'Any Dietary Restrictions?',choices: ['Vegan', 'Vegetarian', 'Pescatarian', 'Hala', 'Kosher']},
+        {question:'Cuisine Preferences?' ,choices: ['Italian', 'American', 'Indian', 'Korean', 'Chinese', 'Thai', 'French', 'Arab', 'Japanese', 'Spanish', 'Ethiopian']},
+        {question:'What is your budget?', choices: ['$50 - $150', '$150 - $500', '$500 - $1,000', '$1000']},
+        {question:'Preferred methods of transportation?', choices: ['Uber', 'Trains', 'Bus', 'Self transportation', 'Bicycles', 'Walking', 'Car rental']},
+        {question:'Activities?', choices: ['Outdoor Physical', 'Swimming', 'Relaxing','Cultural/historical significance sites', 'City Exploring', 'Winter sports']}
+        
+    ];
+
+    const handleNext = () => {
+        setIndex((prevIndex) => prevIndex + 1);
+    }
+
+    const currentQuestion = questions[index];
     
     return(
         <div>
@@ -34,11 +67,39 @@ const TravelForm = () => {
                 </div>
                 
                 <div className="buttons-container">
-                    <button className="travel-buttons">
+                    <button className="travel-buttons" onClick={handleNext}>
                         Get Started!
                     </button>
+
                 </div>
+
+                <UserChoice
+                    handleChange={(e) => setInputs((prevState) => ({
+                        ...prevState,
+                        [e.target.name]: e.target.value,
+                    }))}
+                    
+
+                    label={formQuestions[index].question}
+                    choices={formQuestions[index].choices}
+                    checked={input[index].choices}
+                
+                
+                >
+
+
+                </UserChoice>
+                <button onClick={handleNext} disablle={index === formQuestions.length - 1}>
+
+                </button>
+                
+
+                
+
+                
             </div>
+
+            
         </div>
     )
 }
