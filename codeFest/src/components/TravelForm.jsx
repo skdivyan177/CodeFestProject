@@ -12,7 +12,7 @@ const TravelForm = () => {
                 </h5>
                 </div>
                 
-                <div>
+                <div className="buttons-container">
                     <button className="travel-buttons">
                         Get Started!
                     </button>

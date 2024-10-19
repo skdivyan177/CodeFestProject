@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import TravelForm from './components/TravelForm';
 
+
 const App = () => {
 
   return (
@@ -9,15 +10,17 @@ const App = () => {
     <h1> Destination Calculator </h1>
     
     <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4dxlhJfmDGIMT_m1uv3wXBnoNpOt8SzE9paipVBpcfAz8CIymcnTViGbOt2GVYRn_Sng&usqp=CAU"
+        src="https://brandslogos.com/wp-content/uploads/images/large/marriott-logo.png"
         alt="alt"
         className="small-image" 
       />
+      
     <img
       src="https://cache.marriott.com/is/image/marriotts7prod/fllsb-view-0077:Pano-Hor?wid=1600&fit=constrain"
       alt="alt"
       className="responsive-image"
     />
+    <TravelForm></TravelForm>
     <button type="button">Home</button>
     <button type="button">About Us</button>
     <button type="button">Contact</button>
