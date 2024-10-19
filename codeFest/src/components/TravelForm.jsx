@@ -3,7 +3,7 @@ import React, {Component, useState} from "react";
 const TravelForm = () => {
     
     return(
-        <div>
+        <div >
             <div className="menu-display">
             <button className="menu-button1">
                         Home
