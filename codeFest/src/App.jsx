@@ -11,7 +11,7 @@ const App = () => {
     <h1> Destination Calculator </h1>
 
     <img
-        src="https://brandslogos.com/wp-content/uploads/images/large/marriott-logo.png"
+        src="https://i0.wp.com/www.dafontfree.io/wp-content/uploads/2023/11/marriott-logo.png?resize=1536%2C1007&ssl=1"
         alt="alt"
         className="small-image" 
       />
