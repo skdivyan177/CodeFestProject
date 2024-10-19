@@ -1,13 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import TravelForm from './components/TravelForm';
 
 const App = () => {
 
   return (
 
-    <div>CodeFest Project</div>
+    <div>CodeFest Project hello
+      <TravelForm></TravelForm>
+    </div>
+    
   )
 }
 
