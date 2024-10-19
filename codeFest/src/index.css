@@ -1,0 +1,122 @@
+.image-container { display: flex; flex-direction: column; align-items: center; color: #b41818; }
+
+.image-container { display: flex; flex-direction: column; align-items: center;
+}
+
+.responsive-image { max-width: 150%; height: auto; }
+.small-image { max-width: 150%; height: auto; }
+
+.fixed-size-image { width: 400px; height: 900px; object-fit: cover; }
+
+.question-display{
+    /* padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    border: 1px solid black;
+    margin-top: 40px; */
+
+    position: fixed;
+    /* display: flex;
+    flex-direction: column; */
+    inset: 0px;
+    width: 12rem;
+    height: 18rem;
+    max-width: 1000vw;
+    max-height: 1000dvh;
+    margin: auto;
+    border: 1px solid black;
+    /* background-color: transparent; */
+    padding: 100px;
+    background-color: rgba(255, 255, 255, 0.8);  /*White with 50% opacity */
+    opacity: 1; 
+     
+}
+
+.menu-display1 {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background-color: rgb(232, 229, 229);
+  position: fixed;
+  inset: 0px auto auto 40px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 55px;
+  height: auto;
+}
+
+.menu-display2 {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background-color: rgb(232, 229, 229);
+  position: fixed;
+  inset: 0px auto auto 250px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 75px;
+  height: auto;
+}
+
+.menu-display3 {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background-color: rgb(232, 229, 229);
+  position: fixed;
+  inset: 0px auto auto 490px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 60px;
+  height: auto;
+}
+
+.menu-display4 {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background-color: rgb(232, 229, 229);
+  position: fixed;
+  inset: 0px 10px auto auto;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 95px;
+  height: auto;
+}
+
+.travel-buttons{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: rgb(242, 27, 12);
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.main-title {
+    font-size: 50px;
+}
+
+.sub-title {
+    font-size: 50px;
+}
