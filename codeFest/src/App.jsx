@@ -12,9 +12,6 @@ const App = () => {
     <h1>  </h1>
   <h1 class="main-title">Marriott <br /> Destination Calculator</h1>
   {/* <h1> Text </h1> */}
-
-  
-
     <img
         src={img2}
         alt="alt"
