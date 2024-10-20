@@ -1,6 +1,8 @@
 import React, {Component, useState} from "react";
-import UserChoice from './UserChoice'
-
+import UserChoice from './UserChoice';
+import AboutUs from './AboutUs';
+import Contact from './Contact';
+import Language from './Language';
 
 const TravelForm = () => {
     
@@ -15,16 +17,31 @@ const TravelForm = () => {
     const [userBudget, setUserBudget] = useState('');
     const [userTransport, setUserTransport] = useState([]);
     const [userActivity, setUserActivity] = useState([]);
+    const [index, setIndex] = useState(-1);
+    const [input, setInput] = useState([]);
+    const [show, setShow] = useState(false);
+
+    const [showAboutUs, setShowAboutUs] = useState(false);
+    const [showContact, setShowContact] = useState(false);
+    const [showLanguage, setShowLanguage] = useState(false);
+// {question:'Who are you traveling with?', choices: ''},
+        // {question:'Weather Preferences for Destination?', choices: ''}, 
+        // {question:'Preferred Travel Destination?', choices: ''},
+        // {question:'Any Dietary Restrictions?',choices: ''},
+        // {question:'Cuisine Preferences?' ,choices: ''},
+        // {question:'What is your budget?', choices: ''},
+        // {question:'Preferred methods of transportation?', choices: ''},
+        // {question:'Activities?', choices: ''}
     
     const formQuestions = [
         {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
         {question:'Weather Preferences for Destination?', choices: ['Warm & Breezy', 'Hot & Humid', 'Cold & Rainy', 'Snowy & Chilly']},
-        {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Montain']},
+        {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Mountain']},
         {question:'Any Dietary Restrictions?',choices: ['Vegan', 'Vegetarian', 'Pescatarian', 'Halal', 'Kosher']},
-        {question:'Cuisine Preferences?' ,choices: ['Italian', 'American', 'Indian', 'Korean', 'Chinese', 'Thai', 'French', 'Arab', 'Japanese', 'Spanish', 'Ethiopian']},
+        {question:'Cuisine Preferences?' ,choices: ['Italian', 'American', 'Indian', 'Korean', 'Chinese', 'Japanese', 'Thai', 'French', 'Arab', 'Spanish', 'Ethiopian']},
         {question:'What is your budget?', choices: ['$50 - $150', '$150 - $500', '$500 - $1,000', '$1000']},
         {question:'Preferred methods of transportation?', choices: ['Uber', 'Train', 'Bus', 'Self transportation', 'Bicycles', 'Walking', 'Car rental']},
-        {question:'Activities?', choices: ['Outdoor Physical', 'Swimming', 'Relaxing','Cultural/historical significance sites', 'City Exploring', 'Winter sports']}
+        {question:'Activities?', choices: ['Outdoor & Physical', 'Swimming', 'Relaxing','Cultural/historical significance sites', 'City Exploring', 'Winter sports']}
         
     ];
 
@@ -93,6 +110,21 @@ const TravelForm = () => {
         console.log(input[index]);
     };
     
+    const handleAboutUs = () => {
+        setShowAboutUs(true);
+        setShowContact(false); 
+        setShowLanguage(false);
+    }
+    const handleContact = () => {
+        setShowContact(true);
+        setShowAboutUs(false); 
+        setShowLanguage(false);
+    }
+    const handleLanguage = () => {
+        setShowLanguage(true);
+        setShowAboutUs(false);
+        setShowContact(false);
+    }
     const handleBack = () => {
         setIndex((prevIndex) => prevIndex - 1)
         console.log(index);
@@ -105,19 +137,22 @@ const TravelForm = () => {
             </button>
             </div>
             <div className="menu-display2">
-                    <button className="menu-button2">
+                    <button className="menu-button2" onClick={handleAboutUs}>
                         About Us
                     </button>
+                    {showAboutUs && <AboutUs></AboutUs>}
             </div>
             <div className="menu-display3"> 
-                    <button className="menu-button3">
+                    <button className="menu-button3" onClick={handleContact}>
                         Contact
                     </button>
+                    {showContact && <Contact></Contact>}
             </div>
             <div className="menu-display4"> 
-                    <button className="menu-button4">
+                    <button className="menu-button4" onClick={handleLanguage}>
                         Language 🌐
                     </button>
+                    {showLanguage && <Language></Language>}
             </div>
 
             
@@ -187,7 +222,7 @@ const TravelForm = () => {
 
             
         </div>
-    )
+    );
 }
 
 export default TravelForm;
