@@ -52,11 +52,11 @@
     padding-right: 30px;
     background-color: rgba(255, 255, 255, 0.8);  /*White with 50% opacity */
     opacity: 1; 
-    transform: translateY(350px); 
+    /* transform: translateY(350px); 
       /* Other properties... */
-      transform: translateY(100px); /* Move down by 100px (or use a smaller positive value) */
+      /* transform: translateY(100px); Move down by 100px (or use a smaller positive value) */
       /* OR */
-      transform: translateY(190px); /* Move up by 100px */
+      /* transform: translateY(190px); Move up by 100px */ 
   }
     
 

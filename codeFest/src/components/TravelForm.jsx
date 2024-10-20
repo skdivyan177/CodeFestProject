@@ -3,6 +3,7 @@ import UserChoice from './UserChoice';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
 import Language from './Language';
+import Destination from './Destination';
 
 const TravelForm = () => {
     
@@ -23,6 +24,7 @@ const TravelForm = () => {
     const [showAboutUs, setShowAboutUs] = useState(false);
     const [showContact, setShowContact] = useState(false);
     const [showLanguage, setShowLanguage] = useState(false);
+    const [showDestination, setShowDestination] = useState(false);
 // {question:'Who are you traveling with?', choices: ''},
         // {question:'Weather Preferences for Destination?', choices: ''}, 
         // {question: 'Do you prefer a connecting room?', choices: ['Yes', 'No']}
@@ -80,29 +82,30 @@ const TravelForm = () => {
             setUserTravelers(selectedValue);
             break;
             case 1:
-            setUserWeather(selectedValue);
-            break;
-            case 2:
-            setUserDestination(selectedValue);
-            break;
-            case 3:
-            setUserDietary(selectedValue); // Assuming single selection for dietary restrictions
-            break;
-            case 4:
-            setUserCuisine(selectedValue); // Assuming multiple selections for cuisine are allowed
-            break;
-            case 5:
-            setUserBudget(selectedValue);
-            break;
-            case 6:
-            setUserTransport(selectedValue); // Assuming multiple selections for transport are allowed
-            break;
-            case 7:
-            setUserActivity(selectedValue); // Assuming multiple selections for activities are allowed
-            break;
-            case 8:
                 setUserRoom(selectedValue);
                 break;
+            case 2:
+            setUserWeather(selectedValue);
+            break;
+            case 3:
+            setUserDestination(selectedValue);
+            break;
+            case 4:
+            setUserDietary(selectedValue); // Assuming single selection for dietary restrictions
+            break;
+            case 5:
+            setUserCuisine(selectedValue); // Assuming multiple selections for cuisine are allowed
+            break;
+            case 6:
+            setUserBudget(selectedValue);
+            break;
+            case 7:
+            setUserTransport(selectedValue); // Assuming multiple selections for transport are allowed
+            break;
+            case 8:
+            setUserActivity(selectedValue); // Assuming multiple selections for activities are allowed
+            break;
+            
             default:
             break;
         }
@@ -129,6 +132,14 @@ const TravelForm = () => {
         setShowAboutUs(false);
         setShowContact(false);
     }
+
+    const handleDestination = () => {
+        setShowLanguage(false);
+        setShowAboutUs(false);
+        setShowContact(false);
+        setShowDestination(true);
+    }
+
     const handleBack = () => {
         setIndex((prevIndex) => prevIndex - 1)
         console.log(index);
@@ -175,13 +186,14 @@ const TravelForm = () => {
                     choices={formQuestions[index]?.choices || []}
                     checked={
                         index === 0 ? userTravelers:
-                        index === 1 ? userWeather:
-                        index === 2 ? userDestination:
-                        index === 3 ? userDietary:
-                        index === 4 ? userCuisine:
-                        index === 5 ? userBudget:
-                        index === 6 ? userTransport:
-                        index === 7 ? userActivity:
+                        index === 1 ? userRoom:
+                        index === 2 ? userWeather:
+                        index === 3 ? userDestination:
+                        index === 4 ? userDietary:
+                        index === 5 ? userCuisine:
+                        index === 6 ? userBudget:
+                        index === 7 ? userTransport:
+                        index === 8 ? userActivity:
                         ''
 
                     }
@@ -197,19 +209,28 @@ const TravelForm = () => {
 
                 <div className="buttons-container">
 
-                    {index > 0  && ( // Only display message if index is -1
+                {index === formQuestions.length && (
+                        <Destination></Destination>
+                    )
+
+                }
+
+                    {index > 0 && ( // Only display message if index is -1
                         <button className="travel-buttons" onClick={handleBack}>
                             Back
                         </button>
                     )}
-    
 
-                    
-                    <button className="travel-buttons2" onClick={handleNext}>
+                    {index < formQuestions.length &&
+                        <button className="travel-buttons2" onClick={handleNext}>
                         Next
-                    </button>
+                        </button>
+                    }
+                    
                 </div>
 
+                    
+                    
                 
                 
             </div>
