@@ -146,11 +146,6 @@ const TravelForm = () => {
     }
     return(
         <div>
-            <div className="menu-display1">
-            <button className="menu-button1">
-                        Home
-            </button>
-            </div>
             <div className="menu-display2">
                     <button className="menu-button2" onClick={handleAboutUs}>
                         About Us
