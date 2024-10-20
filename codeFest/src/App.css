@@ -1,6 +1,7 @@
 
 .small-image { 
   width: 200px;
+  height: 189px;
   border-color: black;
   transform: translateY(-200px); 
 }
@@ -10,6 +11,7 @@
   max-width: 100%;     
   width: 1440px;
   height: 10000px;
+  transform: translateY(-200px); 
   
 }
 
