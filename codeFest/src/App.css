@@ -1,9 +1,9 @@
 
 .small-image { 
   width: 200px;
-  height: 189px;
+  height: 200px;
   border-color: black;
-  transform: translateY(-250px); 
+  transform: translateY(-60px); 
 }
 
 .responsive-image {
@@ -11,7 +11,7 @@
   max-width: 100%;     
   width: 1440px;
   height: 10000px;
-  transform: translateY(-200px); 
+  transform: translateY(-230px); 
   
 }
 

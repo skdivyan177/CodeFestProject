@@ -15,8 +15,8 @@ const App = () => {
   return (
   <div className="image-container">
     <h1>  </h1>
-    <h1>  </h1>
-  <h1 className="main-title">Marriott <br /> Destination Calculator</h1>
+    <h1> Marriott </h1>
+  <h1 className="main-title"> Marriott Destination Calculator</h1>
   
     <img
         src={img2}
