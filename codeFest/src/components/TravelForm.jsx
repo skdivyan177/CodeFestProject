@@ -6,8 +6,8 @@ const TravelForm = () => {
     const [index, setIndex] = useState(-1);
     const [input, setInput] = useState([]);
 // {question:'Who are you traveling with?', choices: ''},
+        // {question:'Weather Preferences for Destination?', choices: ''}, 
         // {question:'Preferred Travel Destination?', choices: ''},
-        // {question:'Weather Preferences for Destination?', choices: ''},
         // {question:'Any Dietary Restrictions?',choices: ''},
         // {question:'Cuisine Preferences?' ,choices: ''},
         // {question:'What is your budget?', choices: ''},
@@ -16,8 +16,8 @@ const TravelForm = () => {
     
     const formQuestions = [
         {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
-        {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Montain']},
         {question:'Weather Preferences for Destination?', choices: ['Warm & Breezy', 'Hot & Humid', 'Cold & Rainy', 'Snowy & Chilly']},
+        {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Montain']},
         {question:'Any Dietary Restrictions?',choices: ['Vegan', 'Vegetarian', 'Pescatarian', 'Halal', 'Kosher']},
         {question:'Cuisine Preferences?' ,choices: ['Italian', 'American', 'Indian', 'Korean', 'Chinese', 'Thai', 'French', 'Arab', 'Japanese', 'Spanish', 'Ethiopian']},
         {question:'What is your budget?', choices: ['$50 - $150', '$150 - $500', '$500 - $1,000', '$1000']},
@@ -94,7 +94,7 @@ const TravelForm = () => {
                     <button className="travel-buttons" onClick={handleBack}>
                         Back
                     </button>
-                    <button className="travel-buttons" onClick={handleNext}>
+                    <button className="travel-buttons2" onClick={handleNext}>
                         Next
                     </button>
                 </div>

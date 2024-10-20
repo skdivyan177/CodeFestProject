@@ -18,6 +18,7 @@ const UserChoice = ({handleChange, label, choices, checked }) => {
                         type = "radio"
                         onChange={handleChange}
                         checked = {checked ===choice}
+                        className="multiplechoice"
                         
                         ></input>
 
