@@ -7,6 +7,7 @@
 .small-image { 
     width: 200px;
     border-color: black;
+    transform: translateY(-290px); 
  }
 
 .fixed-size-image { width: 400px; height: 900px; object-fit: cover; }
@@ -38,6 +39,7 @@
     padding: 100px;
     background-color: rgba(255, 255, 255, 0.8);  /*White with 50% opacity */
     opacity: 1; 
+    transform: translateY(350px); 
      
 }
 
