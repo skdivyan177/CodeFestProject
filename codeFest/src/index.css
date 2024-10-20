@@ -64,7 +64,7 @@
     padding-bottom: 10px;
     color: white;
     position: fixed;
-    inset: 800px 1725px auto auto; /* Set top to 20px and left to 150px */
+    inset: 800px 1700px auto auto; /* Set top to 20px and left to 150px */
     width: 75px;
     height: auto;
   }
@@ -76,7 +76,7 @@
     padding-bottom: 10px;
     color: white;
     position: fixed;
-    inset: 850px 1730px auto auto; /* Set top to 70px and left to 150px */
+    inset: 800px 875px auto auto; /* Set top to 70px and left to 150px */
     width: 60px;
     height: auto;
   }
@@ -88,8 +88,8 @@
     padding-bottom: 10px;
     color: white;
     position: fixed;
-    inset: 900px 1705px auto auto; /* Set top to 120px and left to 250px */
-    width: 95px;
+    inset: 800px 50px auto auto; /* Set top to 120px and left to 250px */
+    width: 120px;
     height: auto;
   }
 
