@@ -154,7 +154,7 @@
 }
 
 .marriott-paragraph {
-    color:black
+    color:black;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
 
@@ -206,3 +206,43 @@
     color:black
 }
 
+/* .login-txt{
+    display: flex;
+    flex-direction: column;
+} */
+
+.label-txt{
+    margin: 15px;
+}
+
+.input-txt{
+    padding: 10px 20px;
+    margin-bottom: 4px;
+}
+
+.submit-button{
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(242, 27, 12);
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Aligns buttons to opposite ends */
+    align-items: flex-end; /* Aligns buttons to the bottom */
+}
+
+.recommandation-display {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.location {
+    font-family:cursive ;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #b41818;
+}

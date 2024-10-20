@@ -202,7 +202,7 @@ const TravelForm = () => {
                     {input[index]?.choices && `Your Selection: ${input[index].choices}`}
                 </div> */}
 
-                <div className="buttons-container">
+                <div className="buttons-container flex-container">
 
                 {index === formQuestions.length && (
                         <Destination></Destination>
@@ -211,34 +211,20 @@ const TravelForm = () => {
                 }
 
                     {index > 0 && ( // Only display message if index is -1
-                        <button className="travel-buttons" onClick={handleBack}>
+                        <button className="travel-buttons " onClick={handleBack}>
                             Back
                         </button>
                     )}
 
                     {index < formQuestions.length &&
-                        <button className="travel-buttons2" onClick={handleNext}>
+                        <button className="travel-buttons" onClick={handleNext}>
                         Next
                         </button>
                     }
                     
                 </div>
-
-                    
-                    
                 
-                
-            </div>
-                
-                
-
-                
-                
-
-                
-
-                
-            
+            </div>            
 
             
         </div>

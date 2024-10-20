@@ -5,11 +5,15 @@ const Destination = () => {
     return (
     <div className='recommandation-display'>
 
-        <p>
-            Based on your preferences, <br></br> the best location for you is <br></br>Fort Lauderdale Marriott Harbor Beach Resort & Spa.
-            Enjoy your stay!
-        </p>
+        <pre>
+            Based on your<br/>preferences,
+            we<br/>believe that you'd
+            <br/>enjoy staying at our<br/>
+        </pre>
         
+        <pre className="location">
+            Fort Lauderdale<br/>Marriott Harbor Beach<br/>Resort & Spa. 
+        </pre>
 
     </div>)
 }
