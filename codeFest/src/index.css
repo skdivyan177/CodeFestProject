@@ -1,6 +1,9 @@
 .main-title { display: flex; flex-direction: column; align-items: center; color: #b41818; }
 
-.image-container { display: flex; flex-direction: column; align-items: center;
+.image-container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
 }
 
 /*.responsive-image { max-width: 150%; height: auto; }*/
@@ -14,7 +17,7 @@
 .small-image { 
   width: 200px;
   border-color: black;
-  transform: translateY(-350px); /* Moves the image 20px up */
+  transform: translateY(-285px); /* Moves the image 20px up */
 }
 
 .fixed-size-image { width: 400px; height: 900px; object-fit: cover; }
@@ -37,7 +40,7 @@
     /* display: flex;
     flex-direction: column; */
     inset: 0px;
-    width: 12rem;
+    width: 15rem;
     height: 18rem;
     max-width: 1000vw;
     max-height: 1000dvh;
@@ -49,9 +52,13 @@
     padding-right: 30px;
     background-color: rgba(255, 255, 255, 0.8);  /*White with 50% opacity */
     opacity: 1; 
-    /* transform: translateY(350px);  */
-     
-}
+    transform: translateY(350px); 
+      /* Other properties... */
+      transform: translateY(100px); /* Move down by 100px (or use a smaller positive value) */
+      /* OR */
+      transform: translateY(190px); /* Move up by 100px */
+  }
+    
 
 .menu-display1 {
   padding-left: 100px;
@@ -162,7 +169,7 @@
 }
 
 .marriott-paragraph {
-    color:black
+    color:black;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
 
