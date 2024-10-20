@@ -18,13 +18,14 @@ const TravelForm = () => {
     const [userTransport, setUserTransport] = useState([]);
     const [userActivity, setUserActivity] = useState([]);
     
-    const [show, setShow] = useState(false);
+    
 
     const [showAboutUs, setShowAboutUs] = useState(false);
     const [showContact, setShowContact] = useState(false);
     const [showLanguage, setShowLanguage] = useState(false);
 // {question:'Who are you traveling with?', choices: ''},
         // {question:'Weather Preferences for Destination?', choices: ''}, 
+        // {question: 'Do you prefer a connecting room?', choices: ['Yes', 'No']}
         // {question:'Preferred Travel Destination?', choices: ''},
         // {question:'Any Dietary Restrictions?',choices: ''},
         // {question:'Cuisine Preferences?' ,choices: ''},
@@ -34,6 +35,7 @@ const TravelForm = () => {
     
     const formQuestions = [
         {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
+        {question: 'Do you prefer a connecting room?', choices: ['Yes', 'No']},
         {question:'Weather Preferences for Destination?', choices: ['Warm & Breezy', 'Hot & Humid', 'Cold & Rainy', 'Snowy & Chilly']},
         {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Mountain']},
         {question:'Any Dietary Restrictions?',choices: ['None', 'Vegan', 'Vegetarian', 'Pescatarian', 'Halal', 'Kosher']},
@@ -98,6 +100,9 @@ const TravelForm = () => {
             case 7:
             setUserActivity(selectedValue); // Assuming multiple selections for activities are allowed
             break;
+            case 8:
+                setUserRoom(selectedValue);
+                break;
             default:
             break;
         }
