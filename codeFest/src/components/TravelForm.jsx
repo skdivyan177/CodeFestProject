@@ -19,12 +19,12 @@ const TravelForm = () => {
     
     const formQuestions = [
         {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
-        {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Montain']},
         {question:'Weather Preferences for Destination?', choices: ['Warm & Breezy', 'Hot & Humid', 'Cold & Rainy', 'Snowy & Chilly']},
-        {question:'Any Dietary Restrictions?',choices: ['Vegan', 'Vegetarian', 'Pescatarian', 'Hala', 'Kosher']},
+        {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Montain']},
+        {question:'Any Dietary Restrictions?',choices: ['Vegan', 'Vegetarian', 'Pescatarian', 'Halal', 'Kosher']},
         {question:'Cuisine Preferences?' ,choices: ['Italian', 'American', 'Indian', 'Korean', 'Chinese', 'Thai', 'French', 'Arab', 'Japanese', 'Spanish', 'Ethiopian']},
         {question:'What is your budget?', choices: ['$50 - $150', '$150 - $500', '$500 - $1,000', '$1000']},
-        {question:'Preferred methods of transportation?', choices: ['Uber', 'Trains', 'Bus', 'Self transportation', 'Bicycles', 'Walking', 'Car rental']},
+        {question:'Preferred methods of transportation?', choices: ['Uber', 'Train', 'Bus', 'Self transportation', 'Bicycles', 'Walking', 'Car rental']},
         {question:'Activities?', choices: ['Outdoor Physical', 'Swimming', 'Relaxing','Cultural/historical significance sites', 'City Exploring', 'Winter sports']}
         
     ];
@@ -36,16 +36,16 @@ const TravelForm = () => {
     }
 
     const handleChange = (e) => {
-        setInput((prevState) => ({
-          ...prevState,
-          [e.target.name]: e.target.value, // Use name for question identifier
-        }));
-
-        console.log(input[index]);
-      };
-
-        
+        setInput((prevChoices) => {
+          const newChoices = [...prevChoices];
+          newChoices[index] = e.target.value;
+          return newChoices;
+        });
+    };
     
+    const handleBack = () => {
+        setIndex((prevIndex) => prevIndex - 1)
+    }
     return(
         <div>
             <div className="menu-display1">
@@ -73,10 +73,8 @@ const TravelForm = () => {
             
             <div className="question-display">
                 {index < 0 && ( // Only display message if index is -1
-                    <h5 className="fontstylesize">
-                        Ready to start your course with our Destination Calculator?<br></br>
-                        
-                    Simply click the button below to get started!
+                    <h5>
+                        Ready to start your course with our Destination Calculator? <br /> Simply click the button below to get started!
                     </h5>
                 )}
                 <h5>
@@ -102,8 +100,13 @@ const TravelForm = () => {
                 </div> */}
 
                 <div className="buttons-container">
-                    <button className="travel-buttons" onClick={handleNext}>
-                        Get Started!
+    
+
+                    <button className="travel-buttons" onClick={handleBack}>
+                        Back
+                    </button>
+                    <button className="travel-buttons2" onClick={handleNext}>
+                        Next
                     </button>
                 </div>
 
