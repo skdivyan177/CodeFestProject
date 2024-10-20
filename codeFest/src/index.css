@@ -57,21 +57,9 @@
   }
     
 
-.menu-display1 {
-  padding-left: 100px;
-  padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-  position: fixed;
-  inset: auto 200px 20px 40px;
-  width: 55px;
-  height: auto;
-  
-}
 
 .menu-display2 {
-  padding-left: 50px;
+  padding-left: 10px;
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
