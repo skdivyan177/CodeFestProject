@@ -3,9 +3,9 @@
 .image-container { display: flex; flex-direction: column; align-items: center;
 }
 
-.responsive-image { max-width: 150%; height: auto; }
+.responsive-image { max-width: 150%; height: auto; margin-bottom: 200px;}
 .small-image { 
-    width: 100px;
+    width: 160px;
     border-color: black;
     transform: translateY(-290px); 
  }
@@ -43,61 +43,51 @@
 }
 
 .menu-display1 {
-  padding-left: 15px;
+  padding-left: 100px;
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background-color: rgb(232, 229, 229);
   position: fixed;
-  inset: 0px auto auto 40px;
-  border: 1px solid;
-  border-radius: 10px;
+  inset: auto 200px 20px 40px;
   width: 55px;
   height: auto;
+  
 }
 
 .menu-display2 {
-  padding-left: 15px;
+  padding-left: 50px;
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background-color: rgb(232, 229, 229);
   position: fixed;
-  inset: 0px auto auto 250px;
-  border: 1px solid;
-  border-radius: 10px;
+  inset: auto 200px 20px 220px;
   width: 75px;
   height: auto;
 }
 
 .menu-display3 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background-color: rgb(232, 229, 229);
   position: fixed;
-  inset: 0px auto auto 490px;
-  border: 1px solid;
-  border-radius: 10px;
+  inset: auto 200px 20px 400px;
   width: 60px;
   height: auto;
 }
 
+  
 .menu-display4 {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background-color: rgb(232, 229, 229);
   position: fixed;
-  inset: 0px 10px auto auto;
-  border: 1px solid;
-  border-radius: 10px;
+  inset: auto 250px 20px auto;
   width: 95px;
   height: auto;
 }
@@ -152,3 +142,31 @@
     font-family: 'Times New Roman', Times, serif;
     margin-top: 20px;
 }
+
+.marriott-header {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color:black
+}
+
+.marriott-paragraph {
+    color:black
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.contact {
+    color:black
+}
+.paragraph {
+    color:black
+}
+.paragraph2 {
+    color:black
+}
+.language {
+    color:black
+}
+
