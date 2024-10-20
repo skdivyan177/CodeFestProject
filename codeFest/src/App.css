@@ -2,7 +2,7 @@
 .small-image { 
   width: 200px;
   border-color: black;
-  transform: translateY(-20px); /* Moves the image 20px up */
+  transform: translateY(-200px); 
 }
 
 .responsive-image {
