@@ -1,10 +1,14 @@
 import React, {Component, useState} from "react";
-import UserChoice from './UserChoice'
+import UserChoice from './UserChoice';
+import AboutUs from './AboutUs';
+import Contact from './Contact';
+import Language from './Language';
 
 const TravelForm = () => {
     
     const [index, setIndex] = useState(-1);
     const [input, setInput] = useState([]);
+    const [show, setShow] = useState(false);
 // {question:'Who are you traveling with?', choices: ''},
         // {question:'Weather Preferences for Destination?', choices: ''}, 
         // {question:'Preferred Travel Destination?', choices: ''},
@@ -38,6 +42,15 @@ const TravelForm = () => {
         });
     };
     
+    const handleAboutUs = () => {
+        setShow(true);
+    }
+    const handleContact = () => {
+        setShow(true);
+    }
+    const handleLanguage = () => {
+        setShow(true);
+    }
     const handleBack = () => {
         setIndex((prevIndex) => prevIndex - 1)
     }
@@ -49,19 +62,22 @@ const TravelForm = () => {
             </button>
             </div>
             <div className="menu-display2">
-                    <button className="menu-button2">
+                    <button className="menu-button2" onClick={handleAboutUs}>
                         About Us
                     </button>
+                    {show && <AboutUs></AboutUs>}
             </div>
             <div className="menu-display3"> 
-                    <button className="menu-button3">
+                    <button className="menu-button3" onClick={handleContact}>
                         Contact
                     </button>
+                    {show && <Contact></Contact>}
             </div>
             <div className="menu-display4"> 
-                    <button className="menu-button4">
+                    <button className="menu-button4" onClick={handleLanguage}>
                         Language 🌐
                     </button>
+                    {show && <Language></Language>}
             </div>
 
             
