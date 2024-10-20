@@ -1,21 +1,20 @@
 import React, {Component, useState} from "react";
 import UserChoice from './UserChoice'
 
+
 const TravelForm = () => {
     
-    const [index, setIndex] = useState(-1);
-    const [input, setInput] = useState([
-        {question:'Who are you traveling with?', choices:''},
-        {question:'Preferred Travel Destination?', choices:''},
-        {question:'Weather Preferences for Destination?', choices:''},
-        {question:'Any Dietary Restrictions?',choices:''},
-        {question:'Cuisine Preferences?' ,choices:''},
-        {question:'What is your budget?', choices:''},
-        {question:'Preferred methods of transportation?', choices:''},
-        {question:'Activities?', choices:''}
-    ]);
-
-        // {},{},{},{},{},{},{},{}
+    const [index, setIndex] = useState(0);
+    const [input, setInput] = useState([]);
+    const [userTravelers, setUserTravelers] = useState('');
+    const [userRoom, setUserRoom] = useState('');
+    const [userDestination, setUserDestination] = useState('');
+    const [userWeather, setUserWeather] = useState('');
+    const [userDietary, setUserDietary] = useState([]);
+    const [userCuisine, setUserCuisine] = useState([]);
+    const [userBudget, setUserBudget] = useState('');
+    const [userTransport, setUserTransport] = useState([]);
+    const [userActivity, setUserActivity] = useState([]);
     
     const formQuestions = [
         {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
@@ -31,20 +30,72 @@ const TravelForm = () => {
 
     const handleNext = () => {
         setIndex((prevIndex) => prevIndex + 1);
+        // const userInput = [
+        //     {
+                
+        //     }
 
+        // ];
+
+        setInput(prevState => [...prevState, {
+            travelers: userTravelers,
+            room: userRoom,
+            destination: userDestination,
+            weather: userWeather,
+            dietary: userDietary,
+            cuisine: userCuisine,
+            budget: userBudget,
+            transport: userTransport,
+            activity: userActivity
+        }]);
+
+        console.log(index);
         
     }
 
     const handleChange = (e) => {
-        setInput((prevChoices) => {
-          const newChoices = [...prevChoices];
-          newChoices[index] = e.target.value;
-          return newChoices;
-        });
+        const selectedValue = e.target.value;
+
+  // Update the state based on the current question index
+        switch (index) {
+            case 0:
+            setUserTravelers(selectedValue);
+            break;
+            case 1:
+            setUserWeather(selectedValue);
+            break;
+            case 2:
+            setUserDestination(selectedValue);
+            break;
+            case 3:
+            setUserDietary(selectedValue); // Assuming single selection for dietary restrictions
+            break;
+            case 4:
+            setUserCuisine(selectedValue); // Assuming multiple selections for cuisine are allowed
+            break;
+            case 5:
+            setUserBudget(selectedValue);
+            break;
+            case 6:
+            setUserTransport(selectedValue); // Assuming multiple selections for transport are allowed
+            break;
+            case 7:
+            setUserActivity(selectedValue); // Assuming multiple selections for activities are allowed
+            break;
+            default:
+            break;
+        }
+        // setInput((prevChoices) => {
+        //   const newChoices = [...prevChoices];
+        //   newChoices[index] = e.target.value;
+        //   return newChoices;
+        // });
+        console.log(input[index]);
     };
     
     const handleBack = () => {
         setIndex((prevIndex) => prevIndex - 1)
+        console.log(index);
     }
     return(
         <div>
@@ -72,23 +123,29 @@ const TravelForm = () => {
             
             
             <div className="question-display">
-                {index < 0 && ( // Only display message if index is -1
-                    <h5>
-                        Ready to start your course with our Destination Calculator? <br /> Simply click the button below to get started!
-                    </h5>
-                )}
+                
                 <h5>
                     {formQuestions[index]?.question}
                 </h5>
+
+
                 <UserChoice
-                    
-                    
-                    
 
                     handleChange={handleChange}
                     label={formQuestions[index]?.question || ''} // Handle undefined question
                     choices={formQuestions[index]?.choices || []}
-                    checked={input[index]}
+                    checked={
+                        index === 0 ? userTravelers:
+                        index === 1 ? userWeather:
+                        index === 2 ? userDestination:
+                        index === 3 ? userDietary:
+                        index === 4 ? userCuisine:
+                        index === 5 ? userBudget:
+                        index === 6 ? userTransport:
+                        index === 7 ? userActivity:
+                        ''
+
+                    }
                 
                 
                 >
@@ -100,11 +157,15 @@ const TravelForm = () => {
                 </div> */}
 
                 <div className="buttons-container">
+
+                    {index > 0  && ( // Only display message if index is -1
+                        <button className="travel-buttons" onClick={handleBack}>
+                            Back
+                        </button>
+                    )}
     
 
-                    <button className="travel-buttons" onClick={handleBack}>
-                        Back
-                    </button>
+                    
                     <button className="travel-buttons2" onClick={handleNext}>
                         Next
                     </button>
