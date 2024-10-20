@@ -19,6 +19,7 @@
 
 .fixed-size-image { width: 400px; height: 900px; object-fit: cover; }
 
+
 .question-display, .user-input{
     /* padding: 10px;
     display: flex;
@@ -172,14 +173,47 @@
 }
 
 .contact {
+    font-size: 15px;
+    font-weight: bolder;
+    color:black
+    
+}
+
+.contact2 {
     color:black
 }
+
+/* .paragraph2 {
+    color:black
+} */
+
+.about-message {
+    background-color: #000000; /* Light background color */
+    padding: 20px;
+    margin: 20px auto; /* Center the div with auto margins */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 900px; /* Set a wider max width */
+    width: 90%; /* Set width to 90% of the container */
+}
+
+.marriott-header {
+    color: #000000; /* Darker text for the header */
+    font-size: 15px; /* Larger font size */
+    font-weight: bolder;
+    margin-bottom: 15px; /* Spacing below the header */
+    text-align: center; /* Center align the header */
+}
+
 .paragraph {
-    color:black
+    color: #000000; /* Gray text for the paragraph */
+    font-size: 10px; /* Slightly larger font size */
+    font-weight: bold;
+    line-height: 1.6; /* Improve readability */
+    text-align: justify; /* Justify text for a cleaner look */
 }
-.paragraph2 {
-    color:black
-}
+
+
 .language {
     color:black
 }

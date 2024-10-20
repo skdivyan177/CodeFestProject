@@ -17,8 +17,7 @@ const TravelForm = () => {
     const [userBudget, setUserBudget] = useState('');
     const [userTransport, setUserTransport] = useState([]);
     const [userActivity, setUserActivity] = useState([]);
-    const [index, setIndex] = useState(-1);
-    const [input, setInput] = useState([]);
+    
     const [show, setShow] = useState(false);
 
     const [showAboutUs, setShowAboutUs] = useState(false);
@@ -37,12 +36,12 @@ const TravelForm = () => {
         {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
         {question:'Weather Preferences for Destination?', choices: ['Warm & Breezy', 'Hot & Humid', 'Cold & Rainy', 'Snowy & Chilly']},
         {question:'Preferred Travel Destination?', choices: ['Beach', 'Lake', 'City', 'Mountain']},
-        {question:'Any Dietary Restrictions?',choices: ['Vegan', 'Vegetarian', 'Pescatarian', 'Halal', 'Kosher']},
+        {question:'Any Dietary Restrictions?',choices: ['None', 'Vegan', 'Vegetarian', 'Pescatarian', 'Halal', 'Kosher']},
         {question:'Cuisine Preferences?' ,choices: ['Italian', 'American', 'Indian', 'Korean', 'Chinese', 'Japanese', 'Thai', 'French', 'Arab', 'Spanish', 'Ethiopian']},
         {question:'What is your budget?', choices: ['$50 - $150', '$150 - $500', '$500 - $1,000', '$1000']},
         {question:'Preferred methods of transportation?', choices: ['Uber', 'Train', 'Bus', 'Self transportation', 'Bicycles', 'Walking', 'Car rental']},
         {question:'Activities?', choices: ['Outdoor & Physical', 'Swimming', 'Relaxing','Cultural/historical significance sites', 'City Exploring', 'Winter sports']}
-        
+
     ];
 
     const handleNext = () => {
