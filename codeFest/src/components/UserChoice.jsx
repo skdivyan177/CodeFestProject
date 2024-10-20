@@ -17,7 +17,7 @@ const UserChoice = ({handleChange, label, choices, checked }) => {
                         name = {label}
                         type = "radio"
                         onChange={handleChange}
-                        checked = {checked ===choice}
+                        checked = {checked == choice}
                         
                         ></input>
 

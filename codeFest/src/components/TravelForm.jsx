@@ -4,15 +4,18 @@ import UserChoice from './UserChoice'
 const TravelForm = () => {
     
     const [index, setIndex] = useState(-1);
-    const [input, setInput] = useState([]);
-// {question:'Who are you traveling with?', choices: ''},
-        // {question:'Preferred Travel Destination?', choices: ''},
-        // {question:'Weather Preferences for Destination?', choices: ''},
-        // {question:'Any Dietary Restrictions?',choices: ''},
-        // {question:'Cuisine Preferences?' ,choices: ''},
-        // {question:'What is your budget?', choices: ''},
-        // {question:'Preferred methods of transportation?', choices: ''},
-        // {question:'Activities?', choices: ''}
+    const [input, setInput] = useState([
+        {question:'Who are you traveling with?', choices:''},
+        {question:'Preferred Travel Destination?', choices:''},
+        {question:'Weather Preferences for Destination?', choices:''},
+        {question:'Any Dietary Restrictions?',choices:''},
+        {question:'Cuisine Preferences?' ,choices:''},
+        {question:'What is your budget?', choices:''},
+        {question:'Preferred methods of transportation?', choices:''},
+        {question:'Activities?', choices:''}
+    ]);
+
+        // {},{},{},{},{},{},{},{}
     
     const formQuestions = [
         {question:'Who are you traveling with?', choices: ['Single', 'Couple', 'Group of 3+']},
@@ -28,15 +31,20 @@ const TravelForm = () => {
 
     const handleNext = () => {
         setIndex((prevIndex) => prevIndex + 1);
+
+        
     }
 
     const handleChange = (e) => {
-        setInput((prevChoices) => {
-          const newChoices = [...prevChoices];
-          newChoices[index] = e.target.value;
-          return newChoices;
-        });
-    };
+        setInput((prevState) => ({
+          ...prevState,
+          [e.target.name]: e.target.value, // Use name for question identifier
+        }));
+
+        console.log(input[index]);
+      };
+
+        
     
     return(
         <div>
@@ -77,6 +85,8 @@ const TravelForm = () => {
                 <UserChoice
                     
                     
+                    
+
                     handleChange={handleChange}
                     label={formQuestions[index]?.question || ''} // Handle undefined question
                     choices={formQuestions[index]?.choices || []}
@@ -87,11 +97,17 @@ const TravelForm = () => {
 
                 </UserChoice>
 
+                {/* <div className="user-input">
+                    {input[index]?.choices && `Your Selection: ${input[index].choices}`}
+                </div> */}
+
                 <div className="buttons-container">
                     <button className="travel-buttons" onClick={handleNext}>
                         Get Started!
                     </button>
                 </div>
+
+                
                 
             </div>
                 
