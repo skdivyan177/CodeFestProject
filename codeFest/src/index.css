@@ -57,43 +57,41 @@
   }
     
 
-
-.menu-display2 {
-  padding-left: 10px;
-  padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-  position: fixed;
-  inset: auto 200px 20px 220px;
-  width: 75px;
-  height: auto;
-}
-
-.menu-display3 {
-  padding-left: 10px;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-  position: fixed;
-  inset: auto 200px 20px 400px;
-  width: 60px;
-  height: auto;
-}
-
+  .menu-display2 {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    position: fixed;
+    inset: 800px 1725px auto auto; /* Set top to 20px and left to 150px */
+    width: 75px;
+    height: auto;
+  }
   
-.menu-display4 {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-  position: fixed;
-  inset: auto 250px 20px auto;
-  width: 95px;
-  height: auto;
-}
+  .menu-display3 {
+    padding-left: 10px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    position: fixed;
+    inset: 850px 1730px auto auto; /* Set top to 70px and left to 150px */
+    width: 60px;
+    height: auto;
+  }
+  
+  .menu-display4 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    position: fixed;
+    inset: 900px 1705px auto auto; /* Set top to 120px and left to 250px */
+    width: 95px;
+    height: auto;
+  }
 
 .travel-buttons{
     padding-left: 15px;
