@@ -18,7 +18,7 @@ const TravelForm = () => {
     const [userTransport, setUserTransport] = useState([]);
     const [userActivity, setUserActivity] = useState([]);
     
-    const [show, setShow] = useState(false);
+    
 
     const [showAboutUs, setShowAboutUs] = useState(false);
     const [showContact, setShowContact] = useState(false);
