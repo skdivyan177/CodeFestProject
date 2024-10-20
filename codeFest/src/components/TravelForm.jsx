@@ -96,7 +96,7 @@ const TravelForm = () => {
             
             <div className="question-display">
                 {index < 0 && ( // Only display message if index is -1
-                    <h5>
+                    <h5>  
                         Ready to start your course with our Destination Calculator? <br /> Simply click the button below to get started!
                     </h5>
                 )}
