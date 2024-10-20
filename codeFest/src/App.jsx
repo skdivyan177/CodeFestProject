@@ -6,13 +6,18 @@ import img2 from './images/marriottlogo2.png';
 
 const App = () => {
 
+  const [showForm, setShowForm] = useState(false);
+
+  const handleClick = () => {
+    setShowForm(true);
+    
+  }
   return (
   <div className="image-container">
     <h1>  </h1>
     <h1>  </h1>
-    <h1>  </h1>
-  <h1 class="main-title"><br></br>Marriott <br /> Destination Calculator</h1>
-  {/* <h1> Text </h1> */}
+  <h1 className="main-title">Marriott <br /> Destination Calculator</h1>
+  
     <img
         src={img2}
         alt="alt"
@@ -25,8 +30,20 @@ const App = () => {
       className="responsive-image"
     />
 
+    <div className='question-display' style={{ display: showForm ? 'none' : 'block' }}>
+      <h5>
+        Ready to start your course with our Destination Calculator? <br /> Simply click the button below to get started!
+      </h5>
+      <div className='buttons-container'>
+        <button className="travel-buttons" onClick={handleClick} >
+          Get Started
+        </button>
+      </div>
+    </div>
+
+    {showForm && <TravelForm />}
     
-    <TravelForm></TravelForm>
+    
   </div>  
   )
 }
