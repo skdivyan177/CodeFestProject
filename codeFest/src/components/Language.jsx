@@ -4,12 +4,12 @@ const Language = () => {
     return(
         <div>
 
-            <h3 className="language">
+            <pre className="language">
     
-            Language translator soon to be developed and improved!
+            Language translator soon to be <br />developed and improved!
 
 
-            </h3>
+            </pre>
 
         </div>
     )
