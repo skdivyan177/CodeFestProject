@@ -1,14 +1,9 @@
 
-.small-image {
-  width: 100%;    
-
-  /* max-width: 250px;   
-  height: auto;    
-  margin-bottom: 1rem;  */
-  object-position: center top;
-  object-fit: none;
-  object-position: 15px 10px;
-  width: 100px;
+.small-image { 
+  width: 200px;
+  height: 189px;
+  border-color: black;
+  transform: translateY(-200px); 
 }
 
 .responsive-image {
@@ -16,6 +11,8 @@
   max-width: 100%;     
   width: 1440px;
   height: 10000px;
+  transform: translateY(-200px); 
+  
 }
 
 .button {

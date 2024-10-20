@@ -32,6 +32,8 @@ const TravelForm = () => {
 
     const handleNext = () => {
         setIndex((prevIndex) => prevIndex + 1);
+
+        
     }
 
     const handleChange = (e) => {
@@ -94,6 +96,8 @@ const TravelForm = () => {
                 <UserChoice
                     
                     
+                    
+
                     handleChange={handleChange}
                     label={formQuestions[index]?.question || ''} // Handle undefined question
                     choices={formQuestions[index]?.choices || []}
@@ -103,6 +107,10 @@ const TravelForm = () => {
                 >
 
                 </UserChoice>
+
+                {/* <div className="user-input">
+                    {input[index]?.choices && `Your Selection: ${input[index].choices}`}
+                </div> */}
 
                 <div className="buttons-container">
     
@@ -114,6 +122,8 @@ const TravelForm = () => {
                         Next
                     </button>
                 </div>
+
+                
                 
             </div>
                 
