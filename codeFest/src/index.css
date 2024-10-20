@@ -14,7 +14,7 @@
 .small-image { 
   width: 200px;
   border-color: black;
-  transform: translateY(-350px); /* Moves the image 20px up */
+  transform: translateY(-285px); /* Moves the image 20px up */
 }
 
 .fixed-size-image { width: 400px; height: 900px; object-fit: cover; }
