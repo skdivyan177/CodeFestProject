@@ -5,7 +5,7 @@
 
 .responsive-image { max-width: 150%; height: auto; }
 .small-image { 
-    width: 200px;
+    width: 100px;
     border-color: black;
     transform: translateY(-290px); 
  }
@@ -115,6 +115,25 @@
     background-color: rgb(242, 27, 12);
     border: 1px solid;
     border-radius: 20px;
+    margin-right: 50px;
+    margin-top: 25px;
+
+}
+.travel-buttons2{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: rgb(242, 27, 12);
+    border: 1px solid;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-top: 25px;
+
 }
 
 .buttons-container{
@@ -129,3 +148,7 @@
     text-align: center;
 }
 
+.radio-buttoms {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
