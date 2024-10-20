@@ -9,6 +9,10 @@ const TravelForm = () => {
     const [index, setIndex] = useState(-1);
     const [input, setInput] = useState([]);
     const [show, setShow] = useState(false);
+
+    const [showAboutUs, setShowAboutUs] = useState(false);
+    const [showContact, setShowContact] = useState(false);
+    const [showLanguage, setShowLanguage] = useState(false);
 // {question:'Who are you traveling with?', choices: ''},
         // {question:'Weather Preferences for Destination?', choices: ''}, 
         // {question:'Preferred Travel Destination?', choices: ''},
@@ -45,13 +49,19 @@ const TravelForm = () => {
     };
     
     const handleAboutUs = () => {
-        setShow(true);
+        setShowAboutUs(true);
+        setShowContact(false); 
+        setShowLanguage(false);
     }
     const handleContact = () => {
-        setShow(true);
+        setShowContact(true);
+        setShowAboutUs(false); 
+        setShowLanguage(false);
     }
     const handleLanguage = () => {
-        setShow(true);
+        setShowLanguage(true);
+        setShowAboutUs(false);
+        setShowContact(false);
     }
     const handleBack = () => {
         setIndex((prevIndex) => prevIndex - 1)
@@ -67,19 +77,19 @@ const TravelForm = () => {
                     <button className="menu-button2" onClick={handleAboutUs}>
                         About Us
                     </button>
-                    {show && <AboutUs></AboutUs>}
+                    {showAboutUs && <AboutUs></AboutUs>}
             </div>
             <div className="menu-display3"> 
                     <button className="menu-button3" onClick={handleContact}>
                         Contact
                     </button>
-                    {show && <Contact></Contact>}
+                    {showContact && <Contact></Contact>}
             </div>
             <div className="menu-display4"> 
                     <button className="menu-button4" onClick={handleLanguage}>
                         Language 🌐
                     </button>
-                    {show && <Language></Language>}
+                    {showLanguage && <Language></Language>}
             </div>
 
             
@@ -139,7 +149,7 @@ const TravelForm = () => {
 
             
         </div>
-    )
+    );
 }
 
 export default TravelForm;

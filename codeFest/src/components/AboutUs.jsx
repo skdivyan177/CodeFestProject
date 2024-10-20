@@ -3,7 +3,7 @@ import { Component, useState} from "react";
 const AboutUs = () => {
 
     return(
-        <div>
+        <div classname="about-message">
 
             <h3 className="marriott-header">
     
