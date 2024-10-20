@@ -4,23 +4,23 @@ const Contact = () => {
     return(
         <div>
 
-            <h3 className="contact">
+            <pre className="contact">
     
             Here is our contact information!
 
 
-            </h3>
+            </pre>
 
-            <p className="paragraph2">
+            <pre className="contact2">
             
-            Syt Traore: syt@vt.edu
-            Divyan Dhavale: ddivyan@vt.edu
-            Nuha Rasheed: nuharasheed41@vt.edu
+            Syt Traore: syt@vt.edu <br />
+            Divyan Dhavale: ddivyan@vt.edu <br />
+            Nuha Rasheed: nuharasheed41@vt.edu <br />
             Sabella Ryan: sabir23@vt.edu
 
 
 
-            </p>
+            </pre>
         </div>
     )
 }
